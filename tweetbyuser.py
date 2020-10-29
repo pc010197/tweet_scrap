@@ -17,8 +17,8 @@ def get_tweets(api,username):
         tweets = api.user_timeline(username, page=page)
 
         for tweet in tweets:
-            if (datetime.datetime.now()  - tweet.created_at).day < 2:
-                print(tweet.text.encode("utf"))
+            if (datetime.datetime.now()  - tweets.created_at).day < 2:
+                print(tweet.text.encode("utf-8"))
 
             else:
                 end =True
