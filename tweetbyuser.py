@@ -18,7 +18,7 @@ def get_tweets(api,username):
 
         for tweet in tweets:
             if (datetime.datetime.now()  - tweet.created_at).day < 2:
-                print(tweet.text.encode("utf"))
+                print(tweet.text.encode("utf-8"))
 
             else:
                 end =True
